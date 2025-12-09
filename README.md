@@ -36,6 +36,9 @@ python models_gen/litert/gen_mnist_data.py
 Outputs:
 - `gen_data/mnist/mnist_data.cc` — `kMnistInputs[50][784]` of normalized floats and `kMnistLabels[50]` of `uint8` labels. Adjust `num_samples` in the script to change the batch size.
 
+## Zephyr
+For running zephyr example consider consulting with README.md in zephyr derectory
+
 ## Tips
 - Generated assets live under `saved_models/` and `gen_data/`; clear them if you want a clean re-run.
 - If you need deterministic runs, set `TF_DETERMINISTIC_OPS=1` and seed TensorFlow/NumPy before training.

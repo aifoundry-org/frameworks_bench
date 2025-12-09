@@ -1,2 +1,7 @@
 venv
 saved_models
+
+zephyr/*
+!zephyr/liteRT-micro
+!zephyr/docker
+!zephyr/README.md
