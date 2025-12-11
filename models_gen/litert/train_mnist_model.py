@@ -89,7 +89,7 @@ def main():
     os.makedirs(save_path, exist_ok=True)
     os.makedirs(save_path_tfl, exist_ok=True)
     
-    model.save(save_path)  # SavedModel format
+    model.export(save_path)  # SavedModel format
     print(f"Model saved to: {save_path}")
 
     full_path_tflite = pathlib.Path(os.path.join(save_path_tfl, 'mnist_mlp.tflite'))
