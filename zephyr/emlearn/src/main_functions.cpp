@@ -15,7 +15,7 @@ namespace {
 void setup(void)
 {
 	inference_count = 0;
-	printk("emlearn: samples=%d image=%d\n", kNumSamples, kImageSize);
+	printk("emlearn: total samples=%d image=%d\n", kNumSamples, kImageSize);
 }
 
 void loop(void)
