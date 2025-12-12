@@ -1,7 +1,12 @@
 venv
 saved_models
+__pycache__
+tmp
 
 zephyr/*
 !zephyr/liteRT-micro
+!zephyr/emlearn
 !zephyr/docker
 !zephyr/README.md
+zephyr/emlearn/src/model_data/*
+!zephyr/emlearn/src/model_data/README.md

@@ -23,8 +23,28 @@ west init -m https://github.com/zephyrproject-rtos/zephyr
 ```
 
 5. Update config and pull all the modules
+
+for liteRT
 ```bash
 west config manifest.project-filter -- +tflite-micro
+```
+
+for emlearn
+```bash
+mkdir -p zephyr/submanifests
+
+cat > zephyr/submanifests/emlearn.yaml <<'EOF'
+manifest:
+  projects:
+    - name: emlearn
+      url: https://github.com/emlearn/emlearn.git
+      revision: master
+      path: modules/lib/emlearn
+EOF
+```
+
+
+```bash
 west update
 ```
 
@@ -39,8 +59,15 @@ west sdk install
 ```
 
 8. Build project for quemu
+
+liteRT
 ```bash
 west build -b qemu_riscv64 liteRT-micro
+```
+
+emlearn
+```bash
+west build -b qemu_riscv64 emlearn
 ```
 
 9. Launch project
