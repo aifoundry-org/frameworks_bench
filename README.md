@@ -42,3 +42,53 @@ For running zephyr example consider consulting with README.md in zephyr derector
 ## Tips
 - Generated assets live under `saved_models/` and `gen_data/`; clear them if you want a clean re-run.
 - If you need deterministic runs, set `TF_DETERMINISTIC_OPS=1` and seed TensorFlow/NumPy before training.
+
+## Benchmark results
+
+### liteRT
+
+#### Model weight
+
+```bash
+2.1M    model.cpp.obj
+```
+### Overall app weight
+
+```bash
+4.4M    app.dir/
+```
+
+#### Model performance
+
+**QUEMU - timings are inaccurate!**
+```bash
+RAW: cycles=49150427 ns=4915042700 ms=4915
+Invoke ms: last=4915.04 mean=5021.67 median=5017.37 std=50.62 count=50
+Label=1
+tensor type=float32
+tensor shape=[1, 10] = [[-4.540731, 15.719636, 2.680330, -7.934160, -3.605640, -4.153226, 2.169691, 1.782985, 1.717447,
+-20.352581]]
+```
+
+### emlearn
+
+#### Model weight
+
+In emlearn model is a header file, so it's imported in main_functions obj file.
+```bash
+2.4M    main_functions.cpp.obj
+```
+
+### Overall app weight
+
+```bash
+2.7M    app.dir/
+```
+
+#### Model performance
+
+QUEMU - timings are inaccurate!
+```bash
+Invoke ms: last=4948.55 mean=5028.82 median=5017.46 std=59.55 count=50
+```
+

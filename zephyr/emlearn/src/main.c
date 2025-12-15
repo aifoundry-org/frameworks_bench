@@ -1,7 +1,7 @@
 #include "main_functions.h"
 
 /* Increase number of loops to see repeatable timing output */
-#define NUM_LOOPS 10
+#define NUM_LOOPS 50
 
 int main(void)
 {
