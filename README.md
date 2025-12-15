@@ -60,6 +60,15 @@ For running zephyr example consider consulting with README.md in zephyr derector
 
 #### Model performance
 
+**vexiiriscv FPGA**
+```bash
+RAW: cycles=82024722 ns=820247220 ms=820
+Invoke ms: last=820.25 mean=837.14 median=836.93 std=9.42 count=10
+tensor type=float32
+tensor shape=[1, 10] = [[-5.217735, 15.625002, 1.797457, -7.100753, -2.638395, -7.158819, -4.639622, -1.895034, 1.064150,
+-12.718052]]
+```
+
 **QUEMU - timings are inaccurate!**
 ```bash
 RAW: cycles=49150427 ns=4915042700 ms=4915
