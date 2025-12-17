@@ -69,7 +69,7 @@ tensor shape=[1, 10] = [[-5.217735, 15.625002, 1.797457, -7.100753, -2.638395, -
 -12.718052]]
 ```
 
-**QUEMU - timings are inaccurate!**
+**QEMU - timings are inaccurate!**
 ```bash
 RAW: cycles=49150427 ns=4915042700 ms=4915
 Invoke ms: last=4915.04 mean=5021.67 median=5017.37 std=50.62 count=50

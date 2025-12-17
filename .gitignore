@@ -6,6 +6,7 @@ tmp
 zephyr/*
 !zephyr/liteRT-micro
 !zephyr/emlearn
+!zephyr/iree
 !zephyr/docker
 !zephyr/README.md
 zephyr/emlearn/src/model_data/*

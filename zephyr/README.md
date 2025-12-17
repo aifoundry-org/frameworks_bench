@@ -42,6 +42,19 @@ manifest:
       path: modules/lib/emlearn
 EOF
 ```
+for IREE
+```bash
+cat > zephyr/submanifests/iree.yaml <<'EOF'
+manifest:
+  projects:
+    - name: iree
+      url: https://github.com/iree-org/iree.git
+      revision: main
+      path: modules/lib/iree
+      submodules:
+        - path: third_party/flatcc
+EOF
+```
 
 
 ```bash
