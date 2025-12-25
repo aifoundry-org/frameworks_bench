@@ -1,5 +1,8 @@
 # Zephyr dev container
 
+> [!WARNING]
+> IREE section is WIP
+
 Docker setup to test Zephyr inside a container.
 
 ## Quickstart

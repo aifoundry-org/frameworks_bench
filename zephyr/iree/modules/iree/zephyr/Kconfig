@@ -1,0 +1,12 @@
+menu "IREE Zephyr runtime"
+
+config IREE_ZEPHYR_RUNTIME
+    bool "Enable IREE runtime integration"
+    default y
+
+config IREE_HEAP_SIZE_KB
+    int "IREE heap size in kilobytes"
+    default 256
+    depends on IREE_ZEPHYR_RUNTIME
+
+endmenu
