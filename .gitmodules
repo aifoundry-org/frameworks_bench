@@ -1,0 +1,3 @@
+[submodule "zephyr/kenning-zephyr-runtime"]
+	path = zephyr/kenning-zephyr-runtime
+	url = https://github.com/antmicro/kenning-zephyr-runtime.git
