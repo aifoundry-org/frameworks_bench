@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 REPO_ROOT="$(git rev-parse --show-toplevel)"
-IMAGE_NAME="zephyr-base:latest"
+IMAGE_NAME="zephyr-base:22.04"
 
 docker_args=(
   --rm -it
