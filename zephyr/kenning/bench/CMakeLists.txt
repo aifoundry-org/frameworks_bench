@@ -1,0 +1,23 @@
+cmake_minimum_required(VERSION 3.20.0)
+
+include(../kenning-zephyr-runtime/cmake/increase_board_memory.cmake)
+kenning_increase_board_memory()
+
+find_package(Zephyr REQUIRED HINTS $ENV{ZEPHYR_BASE})
+
+project(kenning_bench)
+
+# if model path starts with "./" make it absolute
+if(CONFIG_KENNING_MODEL_PATH MATCHES "^\./.*")
+ set(CONFIG_KENNING_MODEL_PATH "${CMAKE_CURRENT_SOURCE_DIR}/../${CONFIG_KENNING_MODEL_PATH}")
+endif(CONFIG_KENNING_MODEL_PATH MATCHES "^\./.*")
+
+kenning_gen_model_header("${CMAKE_CURRENT_BINARY_DIR}/src/model_data.h")
+kenning_add_board_repl_target()
+
+include_directories("${CMAKE_CURRENT_SOURCE_DIR}/src" "${CMAKE_CURRENT_BINARY_DIR}/src")
+
+target_sources(app PRIVATE
+  src/main.c
+  src/mnist_data.h
+)

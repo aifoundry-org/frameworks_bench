@@ -1,0 +1,11 @@
+.west
+build
+tvm
+dlpack
+iree
+executorch
+kenning-zephyr-runtime
+zephyr
+modules
+tflite-micro
+renode_latest

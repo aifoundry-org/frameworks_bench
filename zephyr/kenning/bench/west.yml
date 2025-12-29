@@ -1,0 +1,7 @@
+manifest:
+  projects:
+    - name: kenning-zephyr-runtime
+      url: https://github.com/antmicro/kenning-zephyr-runtime.git
+      revision: main
+      path: kenning-zephyr-runtime
+      import: true

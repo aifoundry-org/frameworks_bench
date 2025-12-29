@@ -1,0 +1,8 @@
+menu "Zephyr"
+source "Kconfig.zephyr"
+endmenu
+
+
+module = BENCH_APP
+module-str = bench_app
+source "subsys/logging/Kconfig.template.log_config"
